@@ -1,0 +1,68 @@
+/* CSS pour footer */
+#footer {
+    background-color: $color-dark_grey;
+    padding: 10px 0px 40px 10px;
+
+    .logoFooter {
+        //color: #ffffff;
+        color: $color-white;
+        font-size: 18px;
+    }
+
+    .texteFooter {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: none;
+        color: $color-white;
+
+    }
+
+    .texteFooterBold {
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    .footerIcone {
+        //  line-height: 1.5;
+        display: flex;
+        gap: 5px;
+    }
+
+    .IconeEnBlanc {
+        color: $color-white;
+
+    }
+
+}
+
+/* Desktop pour Footer */
+@media (min-width: $desktop-width) {
+
+    #footer {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        padding: 10px 50px 5px 10px;
+
+        .logoFooter {
+            padding: 20px 50px 20px 150px;
+            margin: 0;
+        }
+
+        .listeFooter {
+            display: flex;
+            align-items: center;
+
+            gap: 36px;
+
+        }
+    }
+}
+
+/* fin CSS pour footer */

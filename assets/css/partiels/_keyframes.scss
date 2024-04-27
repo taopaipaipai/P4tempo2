@@ -1,0 +1,142 @@
+// --- Apparition des menus ---
+
+
+// --- Rotation du check ---
+
+
+// ---Rotation du Loader ---
+
+
+// --- Disparition du loader ---
+
+@keyframes out {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    90% {
+        transform: scale(1);
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+// --- Couleur et mouvement Loader ---
+
+@keyframes mouvement-couleurs-lettres {
+    0% {
+        transform: translateX(0px);
+    }
+
+    14% {
+        transform: translateX(-10px);
+        transform: translateY(-10px);
+        color: red
+    }
+
+    28% {
+        transform: translateX(0px);
+        color: orange
+    }
+
+    42% {
+        transform: translateX(10px);
+        transform: translateY(10px);
+        color: yellow
+    }
+
+    56% {
+        transform: translateX(0px);
+        color: green
+    }
+
+    70% {
+        transform: translateX(-10px);
+        transform: translateY(-10px);
+        color: blue;
+    }
+
+    84% {
+        transform: translateX(0px);
+        transform: translateY(0px);
+        color: indigo
+    }
+
+    98% {
+        transform: translateX(10px);
+        transform: translateY(10px);
+        color: violet
+    }
+
+    100% {
+        transform: translateX(0px);
+        color: transparent;
+    }
+}
+
+
+/// Zzzzzzzz
+
+
+// Mixin "factoriser" de la keyframes modèle qui sera appelé dans d'autres fichier SCSS avec comme
+// passage de parametre "la Hauteur" en px --> Négatif si on veux descendre
+//                                      ou --> Positif si on veux monter
+// et le "Nom" de la keyframe que l'on souhaite lui donner
+
+@mixin keyFrames($hauteur, $nomKeyFram) {
+    @keyframes #{$nomKeyFram} {
+        0% {
+            transform: translateY($hauteur);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+/*
+ Ensemble de keyframes qui seront appelées sur d'autres fichier SCSS
+*/
+
+// keyframe appelé et en parametre le nom de la keyframe et
+// la hauteur - ou + selon le sens que l'on veux lui donner
+
+@include keyFrames(-200px, AnimationVersBas);
+@include keyFrames(80px, AnimationVersHaut);
+@include keyFrames(80px, AnimationLogo);
+
+/*
+Keyframes pour les animations de Flottement
+*/
+
+@keyframes flottementLogoBanner {
+
+    0%,
+    50%,
+    100% {
+        transform: translate(-10, -100);
+        /* Position initiale, pour la suite le flottement se fait en X et Y */
+    }
+
+    20% {
+        transform: translate(50px, -20px);
+    }
+
+    40% {
+        transform: translate(20px, -30px);
+    }
+
+    80% {
+        transform: translate(30px, -40px);
+    }
+
+}

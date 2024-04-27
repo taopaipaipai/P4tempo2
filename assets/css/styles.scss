@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap');
+
+//variables globale
+
+// couleur
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-white: #FFFFFF;
+$color-background: #F3F3F3;
+$color-dark_grey: #353535;
+
+//taille device ou breakpoint
+$tablette-width: 767px;
+$tablette2-width: 470px;
+$desktop-width: 1024px;
+
+// import des mixins
+@import "./partiels/mixins";
+
+// import des partiels
+
+@import "./partiels/keyframes";
+//@import "./partiels/loader";
+@import "./partiels/loader2";
+@import "./partiels/header";
+@import "./partiels/generale";
+@import "./partiels/allbody_page-accueil";
+@import "./partiels/footer";
+@import "./partiels/page_resto";

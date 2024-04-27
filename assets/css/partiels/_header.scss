@@ -1,0 +1,23 @@
+/* CSS pour header */
+.header {
+
+    .logoHeader {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+/* Desktop pour header */
+
+@media (min-width: $desktop-width) {
+
+    #header {
+        margin: 25px;
+
+        .logoHeader {
+            font-size: 44px;
+        }
+    }
+}
+
+/* Fin CSS pour header */

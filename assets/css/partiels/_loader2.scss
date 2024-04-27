@@ -1,0 +1,31 @@
+.loader {
+    position: fixed;
+    content: "";
+    width: 100%;
+    //height: 100%;
+    background: lighten($color-primary, 48%);
+    //background: url(../../images/espace/photo-campagne1.webp);
+    background-size: cover;
+    inset: 0;
+    z-index: 9991;
+    animation: out 3s forwards;
+
+    & img {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        width: 50%;
+        top: 10%;
+        left: 15%;
+        animation: flottementLogoBanner 1.1s infinite forwards;
+
+        @include tablette {
+            width: 35%;
+        }
+
+        @include desktop {
+            width: 25%;
+        }
+
+    }
+}
